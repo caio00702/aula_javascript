@@ -1,4 +1,166 @@
+// rest operator, spread operator...
+// com arrow functions
 
+// o spread operator pode ser usado em strings, arrays, objetos literais e objetos iteraveis
+//Ele quebra os itens e os repassa pra algum lugar seja como parametro de função...exemplos...
+/*
+const str = 'Digital Inovation One';
+const arr=[1, 2, 3, 4];
+
+function logArgs(a, b, c) {
+    console.log(a, b, c);
+}
+
+const arr2 = [5, 6, 7, ...arr];
+
+const arrClone = [...arr];
+*/
+const obj = {
+    test: 123,
+    subObj:{
+        test: 123
+    }
+};
+
+const obj2 = { ...obj, supObj: { ...obj.subObj}};
+    //...obj 
+obj2.subObj.test = 465;
+
+console.log(obj2); 
+/*
+const objMerged ={
+    ...obj,
+    ...obj2
+}*/
+//console.log(objMerged);
+//const arr = [...obj];
+//retornou um erro, ja que obj literais não são interaveis
+
+//console.log(arr);
+//console.log(arrClone);
+
+//logArgs(...arr);
+/*
+const multiply = (...args) => args.reduce((acc, value) => acc * value, 1);
+
+const sum = (...rest) => {
+    return multiply(...rest);
+    //dara erro por conta de que o arguments não foi definido 
+    //trocanddo assim por >>>...rest<<<<
+    //console.log (a, b, rest);
+    //assim pegando o restante dos argumentos e não os dois primeiros
+};
+
+console.log(sum(5, 5, 5, 2, 3));
+*/
+
+
+
+/*function sum(...args) {
+    return args.reduce((acc, value) => acc + value, 0);
+     v da pra ter o mesmo comportamento que esse
+     v
+      >console.log(args); array
+    console.log(arguments); object
+    var value = 0;
+    
+    for (var i = 0; 1 < arguments.length; i++) {
+        value += arguments[i];   
+    }
+    return value;
+}*/
+
+//console.log(sum(5, 5, 5, 2, 3));
+
+
+
+
+/*
+var propName = 'test';
+
+var obj = {
+    [propName + 'concat']: 'prop value'
+};
+
+console.log(obj);
+
+*/
+/*
+function method1() {
+    console.log( 'method called');
+}
+*/
+//var prop1 = 'Digital Inovation One';
+
+/*
+var obj = {
+    sum (a, b){
+        return a + b;
+    }
+};
+console.log (obj.sum(1, 5));
+//console.log(obj);
+*/
+
+
+
+
+
+
+
+
+
+
+/*
+// lazy evaluation
+function randomNumber() {
+    console.log('Generating a random nunber...');
+    return Math.random() * 10;
+}
+
+
+function mutiply(a = 2, b = randomNumber()) {
+    //b = typeof b === 'undefined' ? 1: b;
+    return a * b;
+}
+
+console.log(mutiply(5));
+console.log(mutiply(5));
+//console.log(randomNumber());
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//------------------------------JAVASCRIPT--------------------------------------------------------------
+/*
 function clicou() {
     document.getElementById("Clique aqui para mais").innerHTML = "<b>Clique aqui para mais</b>";
     //console.log(document.getElementById("Clique aqui para mais"));
@@ -29,6 +191,7 @@ function load() {
 function funcaoChange(elemento) {
     console.log(elemento.value)
 }
+*/
 
 /*
 function soma(n1, n2){
